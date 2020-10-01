@@ -245,7 +245,7 @@ public final class ConnectionPoolConfiguration {
             if (clock == null) {
                 throw new IllegalArgumentException("Clock must not be null");
             }
-            this.clock = clock;
+            this.clock = Assert.requireNonNull(clock,"Clock must not be null");
             return this;
         }
 
